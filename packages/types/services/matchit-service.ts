@@ -1,8 +1,12 @@
 import {
   ActivateAccountRequest,
   ActivateAccountResponse,
+  AuthenticatedRequest,
+  JoinRoomRequest,
+  JoinRoomResponse,
   LoginRequest,
   LoginResponse,
+  OpenGameRoom,
   SignUpRequest,
   SignUpResponse,
 } from "../model/matchit-model";
@@ -13,4 +17,9 @@ export type MatchItService = {
   activateAccount(
     request: ActivateAccountRequest
   ): Promise<ActivateAccountResponse>;
+
+  listPublicOpenGames(req: AuthenticatedRequest): Promise<OpenGameRoom[]>;
+  joinRoom(req: JoinRoomRequest): Promise<JoinRoomResponse>;
+
+  getRoomStatus(req: GetRoomStatusRequest): Promise<GetRoomStatusResponse>;
 };
