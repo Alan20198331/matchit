@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+      "jsx": "react",
+      "strict": true,
+      "forceConsistentCasingInFileNames": true,
+      "noFallthroughCasesInSwitch": true,
+      "moduleResolution": "node",
+      "resolveJsonModule": true,
+      "noEmit": true
+    }
+  }
+  
