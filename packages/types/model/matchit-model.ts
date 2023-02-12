@@ -74,7 +74,7 @@ export type GameRoom = {
   status: GameStatus;
   finishedAt?: number;
   imageAssets: GameImageAssetId[];
-  deck: GameImageCard[];
+  deckId: string;
 };
 
 export type GetRoomStatusRequest = AuthenticatedRequest & {
@@ -100,6 +100,12 @@ export type GameImageAssetId = string;
 export type GameImageAsset = {
   imageAssetId: GameImageAssetId;
   imageDataURI: string;
+};
+
+export type GameCardDeck = {
+  deckId: string;
+  name: string;
+  cards: GameImageCard[];
 };
 
 export type GameImageCard = {

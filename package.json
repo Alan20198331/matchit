@@ -8,7 +8,7 @@
     "watch": "pnpm --parallel run -r watch",
     "clean": "pnpm run -r clean",
     "clean:hard": "find . -name 'node_modules' -type d -prune -exec rm -rf '{}' +",
-    "build": "pnpm run generate:dockerfile && pnpm run -r build && echo 'SUCCESS!'"
+    "build": "pnpm run -r build && echo 'SUCCESS!'"
   },
   "dependencies": {},
   "devDependencies": {
