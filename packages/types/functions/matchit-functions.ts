@@ -12,13 +12,14 @@ import type {
 
     while (!(currentdeck.length <= deckCap)){
         currentcard = generateCard(currentdeck.length, imgpercard, assets);
+        let abort = false; //Will stop the for loops once it adds the card to the deck.
          if(!(currentdeck.length = 0)){
-          for(let i = 0; i < currentdeck.length; i++){
-            for(let j = 0; j < currentcard.assets.length; j++){
-              for (let k = 0 ; k < currentdeck[i].assets.length; k++){
+          for(let i = 0; i < currentdeck.length && !abort; i++){
+            for(let j = 0; j < currentcard.assets.length && !abort; j++){
+              for (let k = 0 ; k < currentdeck[i].assets.length && !abort; k++){
                 if(currentcard.assets[j] == currentdeck[i].assets[j]){
-                  currentdeck.push(currentcard);
-                  break;
+                  currentdeck.push(currentcard); //This should only push if it finds at least one common img asset with the card and all other cards in the deck.
+                  abort = true;
                 }  else {
                   k++;
                 }
