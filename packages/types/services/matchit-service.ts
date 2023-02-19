@@ -2,13 +2,15 @@ import {
   ActivateAccountRequest,
   ActivateAccountResponse,
   AuthenticatedRequest,
+  GetRoomStatusRequest,
+  GetRoomStatusResponse,
   JoinRoomRequest,
   JoinRoomResponse,
   LoginRequest,
   LoginResponse,
   OpenGameRoom,
   SignUpRequest,
-  SignUpResponse,
+  SignUpResponse
 } from "../model/matchit-model";
 
 export type MatchItService = {
