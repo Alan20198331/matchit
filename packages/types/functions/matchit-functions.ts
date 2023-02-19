@@ -14,13 +14,16 @@ import type {
         currentcard = generateCard(currentdeck.length, imgpercard, assets);
          if(!(currentdeck.length = 0)){
           for(let i = 0; i < currentdeck.length; i++){
-            for(let j = 0; j < currentdeck.length; j++){
+            for(let j = 0; j < currentcard.assets.length; j++){
+              for (let k = 0 ; k < currentdeck[i].assets.length; k++){
                 if(currentcard.assets[j] == currentdeck[i].assets[j]){
                   currentdeck.push(currentcard);
                   break;
-                } else {
-                  j++;
+                }  else {
+                  k++;
                 }
+              }
+             j++;
             }   
             i++;
           }
