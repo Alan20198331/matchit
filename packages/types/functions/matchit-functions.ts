@@ -5,13 +5,13 @@ import type {
   } from "../model/matchit-model" ;
   
 
-  function generateDeck(assets: GameImageAssetId[] , deckCap : number){
+  function generateDeck(allAssets: GameImageAssetId[] , deckCap : number){
     let currentdeck : Array<GameImageCard> = [];
     let currentcard : GameImageCard 
     let imgpercard = 8; //The total amount of images in each individual card
 
     while (!(currentdeck.length <= deckCap)){
-        currentcard = generateCard(currentdeck.length, imgpercard, assets);
+        currentcard = generateCard(currentdeck.length, imgpercard, allAssets);
         let abort = false; //Will stop the for loops once it adds the card to the deck.
          if(!(currentdeck.length = 0)){
           for(let i = 0; i < currentdeck.length && !abort; i++){
